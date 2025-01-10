@@ -1,0 +1,5 @@
+post_id,post_type,likes,shares,comments,date
+1,carousel,150,30,10,2024-01-01
+2,reel,300,50,80,2024-01-02
+3,static,100,10,5,2024-01-01
+4,reel,400,60,120,2024-01-03
