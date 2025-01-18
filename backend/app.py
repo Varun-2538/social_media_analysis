@@ -77,7 +77,8 @@ def chat():
         # Extract chatbot's reply
         outputs = response.get("outputs", [])
         if outputs:
-            chatbot_response = outputs[0].get("outputs", [])[0].get("outputs", {}).get("message", {}).get("text", "")
+            # Correctly extract the chatbot response
+            chatbot_response = outputs[0]["outputs"][0]["results"]["message"]["text"]
             return jsonify({"message": chatbot_response}), 200
 
         return jsonify({"error": "No response from Langflow API"}), 500
